@@ -139,7 +139,7 @@ function diag() {
 function drawMatch() {
   if ( tds.length == 9 ){
               if ( pClks.length == 9 ){
-                alert("draw")
+                alert("it's a tie")
                 pClks.splice(0,pClks.length+1)
                 tdReset()
               }
