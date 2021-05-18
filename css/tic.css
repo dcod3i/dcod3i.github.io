@@ -8,6 +8,20 @@
 #tbl1 { width: 20vw; height: 28vh; }
 #tbl2 { width: 20vw; height: 28vh; }
 
+#start-btn {
+    font-family: '04b_03';
+    color: inherit;
+    border: 2px dashed #5764f0;
+    outline: none;
+    border-radius: 15px;
+    padding: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    transition: all 300ms ease-in-out;
+    font-size: 1.2em;
+}
+
 tr.tbl1, td.tbl1 {  
     border: 2px solid green;
     text-align: center;
