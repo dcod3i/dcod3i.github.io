@@ -1,7 +1,50 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+  <head>
+    <title>TicTacToe</title>
+       <meta charset="UTF-8">
+       <link rel="stylesheet" href="css/tic.css" >
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body onload="tic()">
+
+    <h1>tic<span>Tac</span>Toe</h1>
+    <center>
+    <div class="row">
+    <div class="pbox">
+      <div class="con_p">
+        <h2> Player 1 </h2>
+        <h2 id="p1"> </h2>
+      </div>
+        <p>  </p>
+    </div>
+    <div class="pbox">
+      <div class="con_p">
+        <h2> Player 2 </h2>
+        <h2 id="p2"> </h2>
+      </div>
+        <p>  </p>
+    </div>
+    </div>
+      <table class="layout" id="tbl">
+        <tr>
+          <td id="1"></td>
+          <td id="2"></td>
+          <td id="3"></td>
+        </tr>
+        <tr>
+          <td id="4"></td>
+          <td id="5"></td>
+          <td id="6"></td>
+        </tr>
+        <tr>
+          <td id="7"></td>
+          <td id="8"></td>
+          <td id="9"></td>
+        </tr>
+      </table>
+    </center>
+
+  </body>
+  <script type="text/javascript" src="js/tic.js" ></script>
 </html>
