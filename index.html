@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TicTacToe</title>
+       <meta charset="UTF-8">
+       <link rel="stylesheet" href="css/tic.css" >
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body >
+                                                <h1>tic<span>Tac</span>Toe</h1>
+
+    <center id="con_main">
+
+      <div class="row">
+            <div class="pbox">
+                <div class="con_p">
+                  <h2> Player 1 </h2>
+                  <h2 id="p1"> </h2>
+                </div>
+                  <p>  </p>
+            </div>
+            <div class="pbox">
+                <div class="con_p">
+                  <h2> Player 2 </h2>
+                  <h2 id="p2"> </h2>
+                </div>
+                  <p>  </p>
+            </div>
+      </div>
+      
+        <div class="con_grid" id="con_grid">
+          <label for="grid">Choose the TIC-TAC-TOE grid size : </label>
+              <select name="grid" id="grid">
+                  <option value="3">3 x 3</option>
+                  <option value="6">6 x 6</option>
+              </select>                              <br><br>
+          <input type="submit" onclick="drawGrid()" value="Submit">
+        </div>
+
+    </center>
+  </body>
+  <script type="text/javascript" src="js/tic.js" ></script>
+</html>
