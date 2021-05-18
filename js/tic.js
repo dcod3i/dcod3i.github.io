@@ -68,12 +68,14 @@ function row1() {
             alert(player1 + " wins")
             p1Score += 1
             pTag[0].innerHTML = "SCORE " + p1Score
+            scoreAud()
             pClks.splice(0,pClks.length+1)
             tdReset()
         } else if ( "p2" == tds[i].innerText && "p2" == tds[i + 1].innerText && "p2" == tds[i + 2].innerText) {
             alert(player2 + " wins")
             p2Score += 1
             pTag[1].innerHTML = "SCORE " + p2Score
+            scoreAud()
             pClks.splice(0,pClks.length+1)
             tdReset()
         }
@@ -86,12 +88,14 @@ function col1() {
             alert(player1 + " wins")
             p1Score += 1
             pTag[0].innerHTML = "SCORE " + p1Score
+            scoreAud()
             pClks.splice(0,pClks.length+1)
             tdReset()
         } else if ("p2" == tds[i].innerText && "p2" == tds[i + 3].innerText && "p2" == tds[i + 6].innerText) {
             alert(player2 + " wins")
             p2Score += 1
             pTag[1].innerHTML = "SCORE " + p2Score
+            scoreAud()
             pClks.splice(0,pClks.length+1)
             tdReset()
         }
@@ -105,24 +109,28 @@ function diag() {
         alert(player1 + " wins")
             p1Score += 1
             pTag[0].innerHTML = "SCORE " + p1Score
+            scoreAud()
             pClks.splice(0,pClks.length+1)
             tdReset()
     } else if ( "p2" == tds[i].innerText && "p2" == tds[i + 4].innerText && "p2" == tds[i + 8].innerText) {
         alert(player2 + " wins")
             p2Score += 1
             pTag[1].innerHTML = "SCORE " + p2Score
+            scoreAud()
             pClks.splice(0,pClks.length+1)
             tdReset()
     } else if ( "p1" == tds[j].innerText && "p1" == tds[j + 2].innerText && "p1" == tds[j + 4].innerText) {
         alert(player1 + " wins")
             p1Score += 1
             pTag[0].innerHTML = "SCORE " + p1Score
+            scoreAud()
             pClks.splice(0,pClks.length+1)
             tdReset()
     } else if ( "p2" == tds[j].innerText && "p2" == tds[j + 2].innerText && "p2" == tds[j + 4].innerText) {
         alert(player2 + " wins")
             p2Score += 1
             pTag[1].innerHTML = "SCORE " + p2Score
+            scoreAud()
             pClks.splice(0,pClks.length+1)
             tdReset()
     }
@@ -137,7 +145,7 @@ function drawMatch() {
               }
             }else{
               if ( pClks.length == 36 ){
-                alert("draw")
+                alert("it's a tie")
                 pClks.splice(0,pClks.length+1)
                 tdReset()
               }
@@ -149,13 +157,22 @@ var opt = document.getElementById('grid')
 var optVal = opt.options[opt.selectedIndex].value
 
     document.getElementById('con_grid').style.display = "none"
+    startAudio()
     if ( optVal == "3" ) {
         createTable(3,3,1)
     }
     else { createTable(6,6,2) }
     
-    tic()
-  
+    tic()  
+}
+
+function startAudio(){
+    let audio = new Audio("sounds/click.mp3");
+    audio.play();
+}
+function scoreAud(){
+    let audio = new Audio("sounds/bonus.wav");
+    audio.play();
 }
 
 function tdReset() {
